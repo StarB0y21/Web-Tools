@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Color Palette Style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="side-tool">
+        <div id="choosed-color"></div>
+        <p id="choosed-color-name">Sample</p>
+        <form action="#" target="_self" method="get" id="color-set" name="color-set">
+            <label for="Contrast" class="range-label">Contrast:</label>
+            <input form="color-set" type="range" id="Contrast" class="range-input" name="Contrast" min="0" max="100">
+            <label for="Opacity" class="range-label">Opacity:</label>
+            <input form="color-set" type="range" id="Opacity" class="range-input" name="Opacity" min="0" max="100">
+            <label for="Brightness" class="range-label">Brightness:</label>
+            <input form="color-set" type="range" id="Brightness" class="range-input" name="Brightness" min="0"
+                max="100">
+            <select name="color-mode" id="color-mode" form="color-set">
+                <option value="RGB">RGB</option>
+                <option value="HEX">HEX</option>
+                <option value="HSL">HSL</option>
+            </select>
+            <div id="side-color-mode">
+                <label for="red" class="color-mode-lable">R:</label>
+                <input form="color-set" type="number" id="red" class="input-text" name="red" min="0" max="255"
+                    value="64" step="1">
+                <label for="green" class="color-mode-lable">G:</label>
+                <input form="color-set" type="number" id="green" class="input-text" name="green" min="0" max="255"
+                    value="64" step="1">
+                <label for="blue" class="color-mode-lable">B:</label>
+                <input form="color-set" type="number" id="blue" class="input-text" name="blue" min="0" max="255"
+                    value="64" step="1">
+            </div>
+        </form>
+    </div>
+    <div id="colors">
+        <div id="color-01">
+            <p>+</p>
+        </div>
+    </div>
+</body>
+
+</html>
