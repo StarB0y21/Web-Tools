@@ -8,25 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-<title>Tool's Homepage</title>
+    <script src="script.js"></script>
+    <title>Tool's Homepage</title>
 </head>
 
 <body>
-    <div id="theme">
+    <div id="grd-1"></div>
+    <div id="grd-2"></div>
+    <div id="theme" onclick="switchTheme()">
         <img id="day" class="theme-image" src="images/icons8-sun-64.png" alt="">
-        <!-- <img id="night" class="theme-image" src="images/icons8-moon-48.png" alt=""> -->
-        <!-- <label class="swithch">
-            <input type="checkbox">
-            <div class="slider"></div>
-            <div class="bg"></div>
-        </label> -->
+        <img id="night" class="theme-image" src="images/icons8-moon-48.png" alt="">
     </div>
-    <a href="Color Palette/Color Palette.html" id="go-to">
-        <div id="holder">
-            <img src="images/color palette sample board.png" alt="" id="icon">
-            <p id="title">Color Palette</p>
-        </div>
-    </a>
+    <div id="ui-setting" onclick="uisetting()"><img src="images/icons8-setting-100.png" alt="" id="ulimg"></div>
+    <div id="themes">
+        <p id="selected">Theme 1</p>
+        <p><del>Theme 2</del>(not active)</p>
+        <p><del>Theme 3</del>(not active)</p>
+        <p><del>Theme 4</del>(not active)</p>
+    </div>
+    <div id="clr-plt-tol">
+        <p class="scrol-arrow"><</p>
+        <a href="Color Palette/Color Palette.html" id="go-to">
+            <div id="holder">
+                <img src="images/color palette sample board.png" alt="" id="icon">
+                <p id="title">Color Palette</p>
+            </div>
+        </a>
+        <p class="scrol-arrow">></p>
+    </div>
     <p id="CR">Created By Star_B0y21</p>
 </body>
 
