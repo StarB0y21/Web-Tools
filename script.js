@@ -1,36 +1,57 @@
 let i = 300;
 let z = 160;
-// console.log(`i equal to ${i}, z equal to ${z}`);
 
 let ItemPosition1 = 18;
 let ItemPosition2 = 28;
-// console.log(`ItemPosition1 equal to ${ItemPosition1}, ItemPosition2 equal to ${ItemPosition2}`);
 
 let o1 = 100;
 let o2 = 100;
-// console.log(`o1 = ${o1}, o2 = ${o2}`);
 
 let boxShadowIncreasing = true;
 let positionIncreasing = true;
 let opacityIncreasing = true;
 
 
+let lighThemeColor01 = "#FFFFFF";
+let lighThemeColor02 = "#333333";
+let lighThemeColor03 = "#F18F01";
+let lighThemeColor04 = "#5DADEC";
+let lighThemeColor05 = "#519195";
+let lighThemeColor06 = "#E0E0E0";
+
+function setTheme() {
+    let dayTheme = document.getElementById("day");
+    let nightTheme = document.getElementById("night");
+    dayTheme.style.opacity = "1";
+    nightTheme.style.opacity = "0";
+    // console.log(dayTheme);
+    // console.log(nightTheme);
+}
+
 function switchTheme() {
     let dayTheme = document.getElementById("day");
     let nightTheme = document.getElementById("night");
 
-    if(nightTheme.style.opacity == "0"){
+    if (nightTheme.style.opacity == "0") {
         nightTheme.style.opacity = "1";
         dayTheme.style.opacity = "0";
-    } else{
+        
+    } else {
         nightTheme.style.opacity = "0";
         dayTheme.style.opacity = "1";
+        lightThemeSet();
     }
-    
-    console.log(dayTheme);
-    console.log(nightTheme);
+
+    // console.log(dayTheme);
+    // console.log(nightTheme);
 }
 
+function lightThemeSet() {
+    let bodyItem = document.body;
+    console.log(bodyItem);
+    bodyItem.style.backgroundColor = lighThemeColor01;
+    bodyItem.style.color = lighThemeColor02;
+}
 
 const positionIController = setInterval(function () {
     let item1 = document.getElementById("grd-1");
@@ -68,8 +89,8 @@ const boxShadowController = setInterval(function () {
     let item1 = document.getElementById("grd-1");
     let item2 = document.getElementById("grd-2");
 
-    item1.style.boxShadow = `0px 0px ${i}px ${z}px #1F3B26`;
-    item2.style.boxShadow = `0px 0px ${i}px ${z}px #519195`;
+    item1.style.boxShadow = `0px 0px ${i}px ${z}px ${lighThemeColor03}`;
+    item2.style.boxShadow = `0px 0px ${i}px ${z}px ${lighThemeColor04}`;
 
     if (boxShadowIncreasing) {
         i += 10;
